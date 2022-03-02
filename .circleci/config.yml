@@ -8,6 +8,7 @@ jobs:
     executor:
       name: android/android-machine
       resource-class: xlarge
+    parallelism: 4 #parallelism for faster build times. the tests will be executed simultaneously
     steps:
       - checkout
       - android/restore-gradle-cache
